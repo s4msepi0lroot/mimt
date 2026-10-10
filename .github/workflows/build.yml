@@ -1,0 +1,66 @@
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build (Gradle)
+        run: ./gradlew build --no-daemon
+
+      - name: Package (jlink + jpackage)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          New-Item -ItemType Directory -Force pkg-in, dist | Out-Null
+          Copy-Item build/libs/mimodel-tool-all.jar pkg-in/mimodel-tool.jar
+          $ErrorActionPreference = 'Continue'
+          jlink --add-modules java.se,jdk.unsupported,jdk.zipfs,jdk.charsets,jdk.localedata,jdk.management,jdk.net,jdk.crypto.cryptoki `
+                --strip-debug --no-header-files --no-man-pages --output runtime
+          $rt = 'runtime'
+          if ($LASTEXITCODE -ne 0 -or -not (Test-Path runtime/bin)) { Write-Host 'jlink failed, using full JDK'; $rt = $env:JAVA_HOME }
+          $ErrorActionPreference = 'Stop'
+          jpackage --type app-image --name mimodel-tool --input pkg-in --main-jar mimodel-tool.jar --main-class mimt.Main `
+                   --runtime-image $rt --dest dist --app-version 1.1.0 --vendor "mimodel-tool" `
+                   --description "Minecraft models to Mine-imator .mimodel" `
+                   --java-options "--sun-misc-unsafe-memory-access=allow" --java-options "--enable-native-access=ALL-UNNAMED" `
+                   --java-options "-Xmx2g" `
+                   --add-launcher mimodel-tool-cli=packaging/cli.properties
+          Copy-Item README.md, README.ru.md dist/mimodel-tool/
+          & dist/mimodel-tool/mimodel-tool-cli.exe --help
+          $global:LASTEXITCODE = 0
+          Compress-Archive -Path dist/mimodel-tool -DestinationPath mimodel-tool-windows.zip -Force
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mimodel-tool-windows
+          path: dist/mimodel-tool
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mimodel-tool-jar
+          path: build/libs/mimodel-tool-all.jar
+
+      - name: Release (on tag v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            mimodel-tool-windows.zip
+            build/libs/mimodel-tool-all.jar

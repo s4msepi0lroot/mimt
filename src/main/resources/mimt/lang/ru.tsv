@@ -1,0 +1,139 @@
+  models found: 	  найдено моделей: 
+ (add the Minecraft jar or enable downloading)	 (добавьте jar Minecraft или включите загрузку)
+ of 	 из 
+ unavailable: 	 недоступны: 
+ - downloading the client...	 - загружаю клиент...
+(see the log)	(см. журнал)
+About	О программе
+Add a mod (.jar), the Minecraft client or a resource pack\n(the “Add files…” button or drop a file onto the window)	Добавьте мод (.jar), клиент Minecraft или ресурспак\n(кнопка «Добавить файлы…» или перетащите файл в окно)
+Add files…	Добавить файлы…
+Add folder…	Добавить папку…
+Ambiguous ID, candidates:	Неоднозначный ID, варианты:
+Auto	Авто
+Blocks	Блоки
+Cache: 	Кэш: 
+Checksum mismatch: 	Неверная контрольная сумма: 
+Choose file…	Выбрать файл…
+Conversion failed:	Не удалось сконвертировать:
+Conversion failed: 	Ошибка конвертации 
+Converting 	Конвертация 
+Converts Minecraft models \ninto Mine-imator .mimodel files.	Конвертирует модели Minecraft \nв файлы .mimodel для Mine-imator.
+Could not evaluate the model geometry	Не удалось вычислить геометрию модели
+Dark	Тёмная
+Done: 	Готово: 
+Done: exported %d, skipped %d → %s	Готово: экспортировано %d, пропущено %d -> %s
+Download Minecraft files	Скачивать файлы Minecraft
+Downloading 	Загрузка 
+Downloading Minecraft libraries 	Загрузка библиотек Minecraft 
+Downloading Mojang mappings for 	Загрузка маппингов Mojang для 
+Downloading is disabled: 	Загрузка из сети отключена: 
+Error	Ошибка
+Error: 	Ошибка: 
+Exit	Выход
+Export	Экспорт
+Export %d models?	Экспортировать %d моделей?
+Export all (filtered)…	Экспорт всех (по фильтру)…
+Export finished: %d done, %d skipped → %s	Экспорт завершён: %d готово, %d пропущено → %s
+Export selected…	Экспорт выбранных…
+Exported by mimodel-tool: 	Экспорт mimodel-tool: 
+Exported: 	Экспортировано: 
+Exporting 	Экспорт 
+Extracting entity models from Minecraft 	Извлечение моделей сущностей из Minecraft 
+Failed to extract entity models from 	Не удалось извлечь модели сущностей из 
+Failed to get Minecraft 	Не удалось получить Minecraft 
+Failed to get the version list: 	Не удалось получить список версий: 
+Failed to open 	Не удалось открыть 
+Failed to open the folder: 	Не удалось открыть папку: 
+Failed to read 	Не удалось прочитать 
+Failed to read PNG: 	Не удалось прочитать PNG: 
+Failed to read the texture	Не удалось прочитать текстуру
+File	Файл
+File not found: 	Файл не найден: 
+File: 	Файл: 
+Folder to save .mimodel files	Папка для сохранения .mimodel
+From model	Из модели
+Geometry not found	Геометрия не найдена
+Help	Справка
+In Mine-imator: “Import” (Ctrl+I) → choose the .mimodel file	В Mine-imator: «Импорт» (Ctrl+I) → выберите файл .mimodel
+Item has no layer textures (layer0)	У предмета нет текстур слоёв (layer0)
+Items	Предметы
+LMB - rotate, RMB - pan, wheel - zoom, double click - reset	ЛКМ - вращать, ПКМ - сдвигать, колесо - масштаб, двойной щелчок - сброс
+Language	Язык
+Layer 	Слой 
+Light	Светлая
+Loading 	Загрузка 
+Log	Журнал
+MC version:	Версия MC:
+Mappings 	Маппинги 
+Minecraft entities	Сущности Minecraft
+Minecraft files needed: 	Нужны файлы Minecraft 
+Minecraft version for missing vanilla files (Auto - from the mod / resource pack)	Версия Minecraft для недостающих ванильных файлов (Авто - по моду / ресурспаку)
+Missing value for 	Не указано значение для 
+Mod (.jar), Minecraft client (.jar), resource pack (.zip), .bbmodel, .geo.json, .jem	Мод (.jar), клиент Minecraft (.jar), ресурспак (.zip), .bbmodel, .geo.json, .jem
+Model cache is corrupted, extracting again	Кэш моделей повреждён, извлекаю заново
+Model has no elements	Модель не содержит элементов
+Model is empty	Модель пустая
+Model is rendered by code (builtin/entity) - cannot be exported	Модель отрисовывается кодом (builtin/entity) - экспорт невозможен
+Model layers extracted: 	Извлечено слоёв моделей: 
+Model not found: 	Модель не найдена: 
+Model: 	Модель: 
+Models	Модели
+Models from mod code (Java)	Модели из кода модов (Java)
+Models: 	Моделей: 
+Mods, Minecraft client, resource packs, models	Моды, клиент Minecraft, ресурспаки, модели
+Mods, resource packs, models (*.jar, *.zip, *.bbmodel, *.json, *.jem)	Моды, ресурспаки, модели (*.jar, *.zip, *.bbmodel, *.json, *.jem)
+No mappings for version 	Нет маппингов для версии 
+No model	Нет модели
+No sources given. See mimodel-tool --help	Не указаны источники. См. mimodel-tool --help
+Open cache folder	Открыть папку кэша
+Open folder	Открыть папку
+Other JSON models	Прочие JSON-модели
+Parent model not found	Не найдена родительская
+Parent model not found: 	Не найдена родительская модель 
+Parts / elements: 	Частей / элементов: 
+Reading 	Чтение 
+Remove	Убрать
+Remove selected sources	Убрать выбранные источники
+Reset view	Сбросить вид
+Resource pack folder or a folder with mods	Папка ресурспака или папка с модами
+Saved: %s (shapes: %d)	Сохранено: %s (фигур: %d)
+Search:	Поиск:
+Select a model on the left	Выберите модель слева
+Select models in the tree (Ctrl/Shift - several, a folder - everything inside).	Выберите модели в дереве (Ctrl/Shift - несколько, папка - все внутри).
+Skipped 	Пропущено 
+Skipped: 	Пропущено: 
+Some textures not found	Часть текстур не найдена
+Some textures not found - replaced with a placeholder	Часть текстур не найдена - заменены заглушкой
+Source added: 	Добавлен источник: 
+Source: 	Источник: 
+Sources (you can drop files here)	Источники (можно перетащить файлы сюда)
+Specify --model ID (see the list command)	Укажите --model ID (см. команду list)
+System	Системная
+Texture from 	Текстура из 
+Texture from file: 	Текстура из файла: 
+Texture not found - placeholder used	Текстура не найдена - использована заглушка
+Texture not found: 	Не найдена текстура 
+Texture picked automatically: 	Текстура подобрана автоматически: 
+Texture:	Текстура:
+Texture: 	Текстура: 
+Theme	Тема
+Tint (grass, foliage)	Окрашивать (трава, листва)
+Total: 	Всего: 
+Type: 	Тип: 
+UV rebuilt into an atlas (hidden faces / UV scale)	UV пересобраны в атлас (скрытые грани / масштаб UV)
+UV rebuilt into an atlas (per-face UV)	UV пересобраны в атлас (UV по граням)
+Unknown Minecraft version: 	Неизвестная версия Minecraft: 
+Unknown command: %s. See mimodel-tool --help	Неизвестная команда: %s. См. mimodel-tool --help
+Unknown option: 	Неизвестный параметр: 
+Unpacked resource pack or a folder with mods (.minecraft/mods)	Распакованный ресурспак или папка с модами (.minecraft/mods)
+Unsupported type	Неподдерживаемый тип
+View	Вид
+archive/folder	архив/папка
+elements 	элементов 
+mimodel-tool is ready. Cache: 	mimodel-tool готов. Кэш: 
+mimodel-tool	mimodel-tool
+mimodel-tool - export Minecraft models to the Mine-imator format (.mimodel)\n\nUsage:\n  mimodel-tool                                 start the graphical interface\n  mimodel-tool list <sources...> [--type T] [--filter TEXT]\n  mimodel-tool export <sources...> --model ID [--texture FILE.png] --out FOLDER\n  mimodel-tool export-all <sources...> --out FOLDER [--type T] [--filter TEXT]\n  mimodel-tool textures <sources...> --model ID   texture candidates for a model\n  mimodel-tool versions                        list Minecraft versions\n\nSources: mod jar, Minecraft client jar, resource pack (.zip or folder), folder with .bbmodel/.geo.json/.jem files.\nTypes (--type): block, item, json, entity, java, geo, bbmodel, cem (comma separated).\n\nOptions:\n  --mc VERSION     Minecraft version for missing vanilla resources (default: from the mod or the latest)\n  --offline        do not download anything\n  --no-tint        do not tint grass/foliage\n  --no-entities    do not extract entity models from the Minecraft client jar\n  --lang en|ru     interface language (default: en)\n  -v               verbose log	mimodel-tool - экспорт моделей Minecraft в формат Mine-imator (.mimodel)\n\nИспользование:\n  mimodel-tool                                 запустить графический интерфейс\n  mimodel-tool list <источники...> [--type T] [--filter ТЕКСТ]\n  mimodel-tool export <источники...> --model ID [--texture ФАЙЛ.png] --out ПАПКА\n  mimodel-tool export-all <источники...> --out ПАПКА [--type T] [--filter ТЕКСТ]\n  mimodel-tool textures <источники...> --model ID   варианты текстур для модели\n  mimodel-tool versions                        список версий Minecraft\n\nИсточники: jar мода, jar клиента Minecraft, ресурспак (.zip или папка), папка с файлами .bbmodel/.geo.json/.jem.\nТипы (--type): block, item, json, entity, java, geo, bbmodel, cem (можно через запятую).\n\nПараметры:\n  --mc ВЕРСИЯ      версия Minecraft для недостающих ванильных ресурсов (по умолчанию - из мода или последняя)\n  --offline        не загружать ничего из интернета\n  --no-tint        не окрашивать траву/листву\n  --no-entities    не извлекать модели сущностей из jar клиента Minecraft\n  --lang en|ru     язык интерфейса (по умолчанию: en)\n  -v               подробный журнал
+mod	мод
+name, id or folder	имя, id или папка
+resource pack	ресурспак
+skipped: 	пропущено: 

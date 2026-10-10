@@ -1,0 +1,57 @@
+plugins {
+    id 'application'
+}
+
+group = 'mimt'
+version = '1.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.14.0'
+    implementation 'org.ow2.asm:asm:9.11'
+    implementation 'org.ow2.asm:asm-tree:9.11'
+    implementation 'org.ow2.asm:asm-commons:9.11'
+    implementation 'com.formdev:flatlaf:3.7.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+    options.compilerArgs += ['-Xlint:-options']
+}
+
+application {
+    mainClass = 'mimt.Main'
+    applicationName = 'mimodel-tool'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'mimt.Main', 'Implementation-Version': project.version
+    }
+}
+
+tasks.register('fatJar', Jar) {
+    archiveFileName = 'mimodel-tool-all.jar'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes 'Main-Class': 'mimt.Main', 'Implementation-Version': project.version
+    }
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'module-info.class', 'META-INF/versions/*/module-info.class'
+}
+
+build.dependsOn fatJar
